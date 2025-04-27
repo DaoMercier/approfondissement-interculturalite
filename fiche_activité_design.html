@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design d'interventions pédagogiques différenciées</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .phase {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .phase-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        textarea, input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0 15px 0;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        .checkboxes label {
+            display: block;
+            margin: 5px 0;
+        }
+        
+        .resource-box {
+            background-color: #f1f9ff;
+            border: 1px solid #bedcf3;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .tip {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        
+        .button:hover {
+            background-color: #2980b9;
+        }
+        
+        .timer {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f6f9;
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .flex-item {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .criteria {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-left: 3px solid #2ecc71;
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        
+        .slider-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .slider {
+            flex: 1;
+            margin-right: 10px;
+        }
+        
+        .design-principle {
+            background-color: #fff8e1;
+            border-left: 3px solid #ffc107;
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .flex-item {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Design d'interventions pédagogiques différenciées</h1>
+    
+    <div class="phase">
+        <div class="phase-number">1</div>
+        <h2>Reciblage des besoins interculturels prioritaires <span class="timer">20 minutes</span></h2>
+        
+        <p>À partir de votre analyse d'observation structurée, identifiez les 2 besoins prioritaires sur lesquels vous allez concentrer votre intervention:</p>
+        
+        <div class="card">
+            <h3>Besoin prioritaire n°1:</h3>
+            <textarea placeholder="Décrivez ce besoin de manière spécifique, observable et mesurable..."></textarea>
+            
+            <h4>Ce besoin est lié aux dimensions suivantes (cochez):</h4>
+            <div class="checkboxes">
+                <label><input type="checkbox"> Linguistique</label>
+                <label><input type="checkbox"> Religieuse/Spirituelle</label>
+                <label><input type="checkbox"> Socio-économique</label>
+                <label><input type="checkbox"> Familiale/Communautaire</label>
+                <label><input type="checkbox"> Migratoire/Administrative</label>
+                <label><input type="checkbox"> Psycho-émotionnelle</label>
+                <label><input type="checkbox"> Autre: <input type="text" style="width: 70%;"></label>
+            </div>
+            
+            <h4>Impact spécifique sur l'apprentissage:</h4>
+            <textarea placeholder="Expliquez comment ce besoin influence concrètement le processus d'apprentissage..."></textarea>
+        </div>
+        
+        <div class="card">
+            <h3>Besoin prioritaire n°2:</h3>
+            <textarea placeholder="Décrivez ce besoin de manière spécifique, observable et mesurable..."></textarea>
+            
+            <h4>Ce besoin est lié aux dimensions suivantes (cochez):</h4>
+            <div class="checkboxes">
+                <label><input type="checkbox"> Linguistique</label>
+                <label><input type="checkbox"> Religieuse/Spirituelle</label>
+                <label><input type="checkbox"> Socio-économique</label>
+                <label><input type="checkbox"> Familiale/Communautaire</label>
+                <label><input type="checkbox"> Migratoire/Administrative</label>
+                <label><input type="checkbox"> Psycho-émotionnelle</label>
+                <label><input type="checkbox"> Autre: <input type="text" style="width: 70%;"></label>
+            </div>
+            
+            <h4>Impact spécifique sur l'apprentissage:</h4>
+            <textarea placeholder="Expliquez comment ce besoin influence concrètement le processus d'apprentissage..."></textarea>
+        </div>
+    </div>
+    
+    <div class="phase">
+        <div class="phase-number">2</div>
+        <h2>Contextualisation de l'intervention <span class="timer">15 minutes</span></h2>
+        
+        <p>Définissez clairement le contexte dans lequel votre intervention pédagogique différenciée s'inscrira:</p>
+        
+        <div class="card">
+            <h3>Cadre de l'intervention:</h3>
+            
+            <label for="setting">Contexte éducatif:</label>
+            <select id="setting">
+                <option value="">Sélectionnez une option</option>
+                <option value="classroom">Salle de classe</option>
+                <option value="workshop">Atelier pratique</option>
+                <option value="workplace">Milieu professionnel (stage/apprentissage)</option>
+                <option value="individual">Accompagnement individuel</option>
+                <option value="other">Autre (précisez)</option>
+            </select>
+            <input type="text" id="setting-other" placeholder="Précisez le contexte si 'Autre'..." style="display: none;">
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <label for="duration">Durée de l'intervention:</label>
+                    <select id="duration">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="single">Séance unique</option>
+                        <option value="short">Séquence courte (2-3 séances)</option>
+                        <option value="medium">Séquence moyenne (4-6 séances)</option>
+                        <option value="long">Dispositif long (trimestre ou plus)</option>
+                    </select>
+                </div>
+                
+                <div class="flex-item">
+                    <label for="participants">Participants impliqués:</label>
+                    <select id="participants">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="individual">Intervention individuelle</option>
+                        <option value="small-group">Petit groupe (2-5 personnes)</option>
+                        <option value="class">Classe entière</option>
+                        <option value="multi-actors">Multi-acteurs (précisez)</option>
+                    </select>
+                    <input type="text" id="participants-other" placeholder="Précisez les acteurs impliqués..." style="display: none;">
+                </div>
+            </div>
+            
+            <h4>Ressources disponibles:</h4>
+            <textarea placeholder="Décrivez les ressources humaines, matérielles et institutionnelles mobilisables..."></textarea>
+            
+            <h4>Contraintes à prendre en compte:</h4>
+            <textarea placeholder="Identifiez les contraintes temporelles, spatiales, institutionnelles à considérer..."></textarea>
+        </div>
+    </div>
+    
+    <div class="phase">
+        <div class="phase-number">3</div>
+        <h2>Conception de l'intervention <span class="timer">40 minutes</span></h2>
+        
+        <div class="resource-box">
+            <h3>Principes de conception d'interventions interculturelles efficaces:</h3>
+            <div class="design-principle">
+                <strong>Principe 1: Adaptation sans simplification excessive</strong> - Adapter le contenu aux besoins sans réduire le niveau d'exigence cognitive
+            </div>
+            <div class="design-principle">
+                <strong>Principe 2: Valorisation des ressources interculturelles</strong> - Utiliser les compétences, connaissances et expériences interculturelles comme leviers d'apprentissage
+            </div>
+            <div class="design-principle">
+                <strong>Principe 3: Multi-modalité</strong> - Proposer différentes modalités d'accès aux contenus et d'expression des acquis
+            </div>
+            <div class="design-principle">
+                <strong>Principe 4: Contextualisation culturelle</strong> - Relier les nouveaux apprentissages aux référents culturels familiers
+            </div>
+            <div class="design-principle">
+                <strong>Principe 5: Clarification des implicites culturels</strong> - Rendre explicites les règles et attentes implicites du contexte éducatif
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Objectifs de l'intervention:</h3>
+            <p class="tip">Formulez 2-3 objectifs spécifiques, mesurables, atteignables, réalistes et temporellement définis:</p>
+            
+            <label for="obj1">Objectif 1:</label>
+            <input type="text" id="obj1" placeholder="Exemple: À la fin de l'intervention, l'apprenant sera capable de...">
+            
+            <label for="obj2">Objectif 2:</label>
+            <input type="text" id="obj2" placeholder="Exemple: À la fin de l'intervention, l'apprenant sera capable de...">
+            
+            <label for="obj3">Objectif 3 (optionnel):</label>
+            <input type="text" id="obj3" placeholder="Exemple: À la fin de l'intervention, l'apprenant sera capable de...">
+            
+            <h4>Concepts théoriques mobilisés:</h4>
+            <textarea placeholder="Identifiez les concepts et approches théoriques qui sous-tendent votre intervention..."></textarea>
+        </div>
+        
+        <div class="card">
+            <h3>Design de l'intervention:</h3>
+            
+            <h4>Étape 1: Amorce/Introduction</h4>
+            <textarea placeholder="Comment allez-vous introduire l'intervention? Comment créer un climat favorable et mobiliser l'attention?"></textarea>
+            
+            <h4>Étape 2: Développement</h4>
+            <textarea placeholder="Quelles activités principales proposez-vous? Comment les structurez-vous? Quelle progression?"></textarea>
+            
+            <h4>Étape 3: Consolidation/Application</h4>
+            <textarea placeholder="Comment permettez-vous la mise en pratique des apprentissages? Comment favorisez-vous le transfert?"></textarea>
+            
+            <h4>Stratégies de différenciation spécifiques:</h4>
+            <p class="tip">Précisez comment vous différenciez votre intervention en fonction des besoins interculturels identifiés:</p>
+            
+            <table>
+                <tr>
+                    <th>Type de différenciation</th>
+                    <th>Description de l'adaptation</th>
+                    <th>Lien avec le besoin interculturel</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select>
+                            <option value="">Sélectionnez</option>
+                            <option value="content">Contenu</option>
+                            <option value="process">Processus</option>
+                            <option value="product">Production</option>
+                            <option value="environment">Environnement d'apprentissage</option>
+                        </select>
+                    </td>
+                    <td><textarea placeholder="Décrivez précisément l'adaptation..."></textarea></td>
+                    <td><textarea placeholder="Expliquez le lien avec le besoin interculturel prioritaire..."></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select>
+                            <option value="">Sélectionnez</option>
+                            <option value="content">Contenu</option>
+                            <option value="process">Processus</option>
+                            <option value="product">Production</option>
+                            <option value="environment">Environnement d'apprentissage</option>
+                        </select>
+                    </td>
+                    <td><textarea placeholder="Décrivez précisément l'adaptation..."></textarea></td>
+                    <td><textarea placeholder="Expliquez le lien avec le besoin interculturel prioritaire..."></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select>
+                            <option value="">Sélectionnez</option>
+                            <option value="content">Contenu</option>
+                            <option value="process">Processus</option>
+                            <option value="product">Production</option>
+                            <option value="environment">Environnement d'apprentissage</option>
+                        </select>
+                    </td>
+                    <td><textarea placeholder="Décrivez précisément l'adaptation..."></textarea></td>
+                    <td><textarea placeholder="Expliquez le lien avec le besoin interculturel prioritaire..."></textarea></td>
+                </tr>
+            </table>
+            
+            <h4>Ressources et matériel nécessaires:</h4>
+            <textarea placeholder="Listez tous les outils, supports, ressources humaines nécessaires à l'intervention..."></textarea>
+        </div>
+    </div>
+    
+    <div class="phase">
+        <div class="phase-number">4</div>
+        <h2>Évaluation de l'intervention <span class="timer">15 minutes</span></h2>
+        
+        <div class="card">
+            <h3>Modalités d'évaluation:</h3>
+            
+            <h4>1. Comment allez-vous mesurer l'atteinte des objectifs?</h4>
+            <textarea placeholder="Décrivez les indicateurs et moyens d'observation qui vous permettront d'évaluer si l'intervention a atteint ses objectifs..."></textarea>
+            
+            <h4>2. Comment allez-vous recueillir le feedback des apprenants?</h4>
+            <textarea placeholder="Précisez les méthodes utilisées pour obtenir un retour des apprenants sur l'intervention..."></textarea>
+            
+            <h4>3. Critères de réussite spécifiques:</h4>
+            <p class="tip">Définissez 3-4 critères qui vous permettront de juger de la réussite de votre intervention</p>
+            
+            <div class="criteria">
+                <label for="criteria1">Critère 1:</label>
+                <input type="text" id="criteria1" placeholder="Exemple: Niveau d'engagement des apprenants">
+                <div class="slider-container">
+                    <label>Niveau minimal acceptable:</label>
+                    <input type="range" class="slider" min="1" max="5" value="3">
+                    <span>3/5</span>
+                </div>
+            </div>
+            
+            <div class="criteria">
+                <label for="criteria2">Critère 2:</label>
+                <input type="text" id="criteria2" placeholder="Exemple: Progression dans la compétence visée">
+                <div class="slider-container">
+                    <label>Niveau minimal acceptable:</label>
+                    <input type="range" class="slider" min="1" max="5" value="3">
+                    <span>3/5</span>
+                </div>
+            </div>
+            
+            <div class="criteria">
+                <label for="criteria3">Critère 3:</label>
+                <input type="text" id="criteria3" placeholder="Exemple: Capacité à transférer dans d'autres contextes">
+                <div class="slider-container">
+                    <label>Niveau minimal acceptable:</label>
+                    <input type="range" class="slider" min="1" max="5" value="3">
+                    <span>3/5</span>
+                </div>
+            </div>
+            
+            <h4>4. Plan d'ajustement:</h4>
+            <textarea placeholder="Anticipez les difficultés potentielles et prévoyez des stratégies d'ajustement..."></textarea>
+        </div>
+    </div>
+    
+    <div class="phase">
+        <div class="phase-number">5</div>
+        <h2>Synthèse et préparation à la présentation <span class="timer">10 minutes</span></h2>
+        
+        <div class="card">
+            <h3>Points clés de votre intervention:</h3>
+            <p class="tip">Résumez en quelques points l'essence de votre intervention pour la présentation</p>
+            
+            <textarea placeholder="1. [Point clé 1]
+2. [Point clé 2]
+3. [Point clé 3]
+..."></textarea>
+            
+            <h4>Ce qui rend votre intervention particulièrement adaptée aux besoins interculturels:</h4>
+            <textarea placeholder="Expliquez en quoi votre intervention répond spécifiquement aux besoins interculturels identifiés..."></textarea>
+            
+            <h4>Questions pour le feedback:</h4>
+            <textarea placeholder="Notez 2-3 questions spécifiques sur lesquelles vous aimeriez recevoir du feedback..."></textarea>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin: 30px 0;">
+        <button class="button" onclick="saveDesign()">Enregistrer mon design</button>
+        <button class="button" onclick="preparePresentation()">Préparer ma présentation</button>
+    </div>
+
+    <script>
+        // Toggle 'Autre' input fields
+        document.getElementById('setting').addEventListener('change', function() {
+            document.getElementById('setting-other').style.display = 
+                this.value === 'other' ? 'block' : 'none';
+        });
+        
+        document.getElementById('participants').addEventListener('change', function() {
+            document.getElementById('participants-other').style.display = 
+                this.value === 'multi-actors' ? 'block' : 'none';
+        });
+        
+        // Update slider values
+        const sliders = document.querySelectorAll('.slider');
+        sliders.forEach(slider => {
+            slider.addEventListener('input', function() {
+                this.nextElementSibling.textContent = this.value + '/5';
+            });
+        });
+        
+        // Save design function (placeholder)
+        function saveDesign() {
+            alert("Fonctionnalité d'enregistrement simulée. Dans un environnement réel, votre design serait sauvegardé.");
+        }
+        
+        // Prepare presentation function (placeholder)
+        function preparePresentation() {
+            alert("Cette fonction générerait une présentation synthétique de votre design d'intervention.");
+        }
+    </script>
+</body>
+</html>

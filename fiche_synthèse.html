@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthèse et préparation à l'examen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(90deg, #2b6cb0 0%, #1a365d 100%);
+            color: white;
+            padding: 20px 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .content {
+            padding: 30px;
+            display: flex;
+        }
+        .left-panel {
+            width: 55%;
+            padding-right: 20px;
+        }
+        .right-panel {
+            width: 45%;
+        }
+        .intro-text {
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 25px;
+        }
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .concept-box {
+            background-color: #ebf8ff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid #3182ce;
+            transition: transform 0.2s;
+        }
+        .concept-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .concept-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c5282;
+            margin-bottom: 5px;
+        }
+        .concept-desc {
+            font-size: 14px;
+            color: #4a5568;
+        }
+        .checklist-container {
+            background-color: #e6fffa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .checklist-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #234e52;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #81e6d9;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #319795;
+            border-radius: 4px;
+            margin-right: 10px;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        .checkbox::after {
+            content: "✓";
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .checkbox:hover {
+            background-color: #319795;
+        }
+        .checkbox:hover::after {
+            opacity: 1;
+        }
+        .checklist-text {
+            font-size: 15px;
+            color: #2d3748;
+            line-height: 1.4;
+        }
+        .footer-note {
+            font-size: 14px;
+            color: #718096;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click functionality to checkboxes
+            document.querySelectorAll('.checkbox').forEach(checkbox => {
+                checkbox.addEventListener('click', function() {
+                    this.classList.toggle('checked');
+                    if (this.classList.contains('checked')) {
+                        this.style.backgroundColor = '#319795';
+                        this.style.borderColor = '#319795';
+                        const checkmark = document.createElement('span');
+                        checkmark.classList.add('checkmark');
+                        checkmark.innerHTML = '✓';
+                        checkmark.style.color = 'white';
+                        checkmark.style.position = 'absolute';
+                        checkmark.style.top = '50%';
+                        checkmark.style.left = '50%';
+                        checkmark.style.transform = 'translate(-50%, -50%)';
+                        this.appendChild(checkmark);
+                    } else {
+                        this.style.backgroundColor = '';
+                        this.style.borderColor = '#319795';
+                        const checkmark = this.querySelector('.checkmark');
+                        if (checkmark) {
+                            this.removeChild(checkmark);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Synthèse des concepts-clés : Préparation à l'examen</h1>
+            <p>Récapitulatif et checklist de préparation</p>
+        </div>
+        
+        <div class="content">
+            <div class="left-panel">
+                <div class="intro-text">
+                    Récapitulatif des notions essentielles abordées pendant la formation
+                </div>
+                
+                <div class="concepts-grid">
+                    <div class="concept-box">
+                        <div class="concept-title">Observer la diversité culturelle</div>
+                        <div class="concept-desc">Identifier les manifestations culturelles et leur impact sur les dynamiques d'apprentissage</div>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <div class="concept-title">Analyser les dimensions culturelles</div>
+                        <div class="concept-desc">Interpréter les comportements à travers les modèles théoriques et identifier les malentendus</div>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <div class="concept-title">Concevoir des interventions adaptées</div>
+                        <div class="concept-desc">Développer des stratégies pour gérer l'hétérogénéité et favoriser l'inclusion</div>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <div class="concept-title">Évaluer l'impact interculturel</div>
+                        <div class="concept-desc">Mesurer l'efficacité des interventions et proposer des améliorations ciblées</div>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <div class="concept-title">Communiquer en contexte multiculturel</div>
+                        <div class="concept-desc">Adapter son style et ses méthodes pour assurer la compréhension partagée</div>
+                    </div>
+                    
+                    <div class="concept-box">
+                        <div class="concept-title">Créer un environnement inclusif</div>
+                        <div class="concept-desc">Établir un climat favorisant la participation et la réussite de tous les élèves</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="checklist-container">
+                    <div class="checklist-title">
+                        Vérification avec les indicateurs d'examen
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Je sais identifier une situation interculturelle et décrire les éléments culturels pertinents
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Je peux analyser les interactions en utilisant des concepts théoriques appropriés
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Je suis capable de proposer des interventions qui tiennent compte de la diversité culturelle
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Je peux justifier mes choix d'interventions en lien avec le contexte spécifique
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Je sais évaluer l'efficacité de mes interventions et identifier leurs forces et faiblesses
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Je peux proposer des améliorations concrètes basées sur mon évaluation
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checkbox"></div>
+                        <div class="checklist-text">
+                            Ma démarche est cohérente de l'observation à l'évaluation des résultats
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-note">
+                    Pour réussir l'examen, assurez-vous de couvrir l'ensemble du processus: observation, analyse, intervention et évaluation.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

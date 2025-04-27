@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activité d'observation structurée</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .instructions {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .case-study {
+            background-color: #edf7ff;
+            border: 1px solid #bedcf3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .case-tabs {
+            display: flex;
+            margin-bottom: -1px;
+        }
+        
+        .case-tab {
+            padding: 10px 20px;
+            background-color: #e3f2fd;
+            border: 1px solid #bedcf3;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .case-tab.active {
+            background-color: #edf7ff;
+            border-bottom: 1px solid #edf7ff;
+        }
+        
+        .case-content {
+            display: none;
+        }
+        
+        .case-content.active {
+            display: block;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f6f9;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+            min-height: 60px;
+            font-family: inherit;
+        }
+        
+        .step {
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+        
+        .timer {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .notes {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        
+        .button:hover {
+            background-color: #2980b9;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Activité d'observation structurée de situations interculturelles</h1>
+    
+    <div class="instructions">
+        <h2><span class="step">1</span>Objectifs et déroulement <span class="timer">90 minutes</span></h2>
+        <p>Cette activité vise à développer votre capacité à:</p>
+        <ul>
+            <li>Analyser une situation interculturelle concrète en mobilisant les concepts théoriques</li>
+            <li>Identifier avec précision les besoins spécifiques nécessitant une différenciation</li>
+            <li>Justifier votre analyse par des éléments objectifs observables</li>
+        </ul>
+        
+        <p><strong>Déroulement:</strong></p>
+        <ul>
+            <li><strong>Phase 1:</strong> Travail d'analyse en sous-groupe (45 min)</li>
+            <li><strong>Phase 2:</strong> Restitution croisée (30 min)</li>
+            <li><strong>Phase 3:</strong> Synthèse collective (15 min)</li>
+        </ul>
+    </div>
+    
+    <div class="case-tabs">
+        <div class="case-tab active" onclick="switchCase(event, 'case1')">Cas 1: Amir</div>
+        <div class="case-tab" onclick="switchCase(event, 'case2')">Cas 2: Sofia</div>
+    </div>
+    
+    <div id="case1" class="case-content active">
+        <div class="case-study">
+            <h3>Cas 1: Amir, 17 ans</h3>
+            <p>Amir est un jeune Afghan de 17 ans arrivé en Suisse il y a 10 mois avec son frère de 15 ans. Leurs parents sont décédés lors d'un bombardement à Kaboul. Ils ont voyagé pendant près d'un an avant d'obtenir un permis F (admission provisoire) en Suisse.</p>
+            <p>Sa langue maternelle est le dari, mais il a également appris des bases de turc et d'allemand pendant son parcours migratoire. Placé dans une classe de préapprentissage depuis 6 mois, Amir progresse en français écrit, mais reste hésitant à l'oral. Cette difficulté linguistique a compliqué ses recherches d'apprentissage, plusieurs employeurs ayant émis des réserves lors d'entretiens malgré ses compétences techniques.</p>
+            <p>Musulman pratiquant, Amir a évoqué ses inquiétudes concernant la conciliation entre pratique religieuse et exigences professionnelles lors de son futur apprentissage, notamment pour la prière et le Ramadan. Lors d'un stage d'observation en cuisine, il s'est senti mal à l'aise face à la manipulation de certains produits non-halal.</p>
+            <p>Son enseignant a remarqué ses talents manuels exceptionnels, et Amir est très motivé pour décrocher un apprentissage en menuiserie. Cependant, il est souvent distrait en classe car il s'inquiète pour la situation de son frère et leur avenir en Suisse, surtout depuis que leur demande de regroupement familial pour faire venir leur oncle a été refusée.</p>
+        </div>
+    </div>
+    
+    <div id="case2" class="case-content">
+        <div class="case-study">
+            <h3>Cas 2: Sofia, 16 ans</h3>
+            <p>Sofia, 16 ans, est arrivée du Venezuela il y a 18 mois avec sa mère et sa sœur aînée. Son père, ingénieur, est resté au pays. Après un passage en classe de transition, Sofia a intégré une formation AFP d'assistante de bureau, bien qu'elle visât initialement un CFC d'employée de commerce.</p>
+            <p>Au Venezuela, Sofia fréquentait un lycée privé prestigieux et se destinait à des études universitaires. Elle parle couramment espagnol et anglais, a un bon niveau de français à l'écrit mais peine à s'exprimer oralement dans un contexte professionnel. Lors de son stage en entreprise, elle utilise souvent l'anglais quand elle ne trouve pas ses mots en français, ce qui a été signalé comme problématique par son formateur.</p>
+            <p>Issue d'une famille catholique pratiquante, Sofia a demandé des autorisations d'absence pour certaines fêtes religieuses importantes, ce qui a été mal compris par certains enseignants. Ses valeurs conservatrices concernant les relations hommes-femmes créent parfois des malentendus avec ses collègues de stage, notamment lors d'événements sociaux après le travail.</p>
+            <p>Sa mère, médecin au Venezuela, suit actuellement une formation pour faire reconnaître son diplôme. Sofia se sent responsable de soutenir moralement sa famille et vit difficilement leur déclassement social. Elle refuse les invitations de ses camarades, gênée par leur situation financière précaire actuelle, et maintient des contacts quotidiens avec ses amies vénézuéliennes qui étudient à l'université.</p>
+        </div>
+    </div>
+    
+    <h2><span class="step">2</span>Grille d'observation structurée</h2>
+    
+    <div>
+        <h3>PARTIE 1: IDENTIFICATION DES DIMENSIONS INTERCULTURELLES</h3>
+        <table>
+            <tr>
+                <th width="20%">Dimension</th>
+                <th width="25%">Éléments observables</th>
+                <th width="25%">Exemples/Citations du cas</th>
+                <th width="30%">Impact sur l'apprentissage</th>
+            </tr>
+            <tr>
+                <td><strong>Linguistique</strong><br>• Langues maîtrisées<br>• Niveau dans la langue d'enseignement<br>• Stratégies communicatives</td>
+                <td><textarea placeholder="Notez ici les éléments observables..."></textarea></td>
+                <td><textarea placeholder="Citez des exemples précis du cas..."></textarea></td>
+                <td><textarea placeholder="Analysez l'impact sur l'apprentissage..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Religieuse</strong><br>• Pratiques spécifiques<br>• Valeurs associées<br>• Besoins d'accommodation</td>
+                <td><textarea placeholder="Notez ici les éléments observables..."></textarea></td>
+                <td><textarea placeholder="Citez des exemples précis du cas..."></textarea></td>
+                <td><textarea placeholder="Analysez l'impact sur l'apprentissage..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Socio-économique</strong><br>• Statut actuel vs antérieur<br>• Ressources disponibles<br>• Représentations sociales</td>
+                <td><textarea placeholder="Notez ici les éléments observables..."></textarea></td>
+                <td><textarea placeholder="Citez des exemples précis du cas..."></textarea></td>
+                <td><textarea placeholder="Analysez l'impact sur l'apprentissage..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Familiale/Communautaire</strong><br>• Structure familiale<br>• Responsabilités<br>• Réseaux de soutien</td>
+                <td><textarea placeholder="Notez ici les éléments observables..."></textarea></td>
+                <td><textarea placeholder="Citez des exemples précis du cas..."></textarea></td>
+                <td><textarea placeholder="Analysez l'impact sur l'apprentissage..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Migratoire/Administrative</strong><br>• Parcours migratoire<br>• Statut légal<br>• Projection dans le futur</td>
+                <td><textarea placeholder="Notez ici les éléments observables..."></textarea></td>
+                <td><textarea placeholder="Citez des exemples précis du cas..."></textarea></td>
+                <td><textarea placeholder="Analysez l'impact sur l'apprentissage..."></textarea></td>
+            </tr>
+        </table>
+        
+        <h3>PARTIE 2: ANALYSE DES BESOINS SPÉCIFIQUES DE DIFFÉRENCIATION</h3>
+        <p class="notes">Identifiez au moins 3 besoins spécifiques qui nécessitent une différenciation pédagogique, en vous appuyant sur l'analyse précédente.</p>
+        <table>
+            <tr>
+                <th width="15%">Type de besoin</th>
+                <th width="40%">Description détaillée</th>
+                <th width="15%">Priorité (1-3)</th>
+                <th width="30%">Justification théorique</th>
+            </tr>
+            <tr>
+                <td><strong>Besoin 1</strong></td>
+                <td><textarea placeholder="Décrivez précisément ce besoin..."></textarea></td>
+                <td>
+                    <select style="width:100%; padding:8px;">
+                        <option value="">Sélectionner</option>
+                        <option value="1">1 (Prioritaire)</option>
+                        <option value="2">2 (Importante)</option>
+                        <option value="3">3 (Secondaire)</option>
+                    </select>
+                </td>
+                <td><textarea placeholder="Justifiez en vous appuyant sur les concepts théoriques..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Besoin 2</strong></td>
+                <td><textarea placeholder="Décrivez précisément ce besoin..."></textarea></td>
+                <td>
+                    <select style="width:100%; padding:8px;">
+                        <option value="">Sélectionner</option>
+                        <option value="1">1 (Prioritaire)</option>
+                        <option value="2">2 (Importante)</option>
+                        <option value="3">3 (Secondaire)</option>
+                    </select>
+                </td>
+                <td><textarea placeholder="Justifiez en vous appuyant sur les concepts théoriques..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Besoin 3</strong></td>
+                <td><textarea placeholder="Décrivez précisément ce besoin..."></textarea></td>
+                <td>
+                    <select style="width:100%; padding:8px;">
+                        <option value="">Sélectionner</option>
+                        <option value="1">1 (Prioritaire)</option>
+                        <option value="2">2 (Importante)</option>
+                        <option value="3">3 (Secondaire)</option>
+                    </select>
+                </td>
+                <td><textarea placeholder="Justifiez en vous appuyant sur les concepts théoriques..."></textarea></td>
+            </tr>
+        </table>
+        
+        <h3>PARTIE 3: RESSOURCES ET OBSTACLES</h3>
+        <p class="notes">Identifiez les ressources mobilisables et les obstacles potentiels pour répondre aux besoins identifiés.</p>
+        <table>
+            <tr>
+                <th width="20%">Niveau</th>
+                <th width="40%">Ressources identifiées</th>
+                <th width="40%">Obstacles potentiels</th>
+            </tr>
+            <tr>
+                <td><strong>Personnels</strong></td>
+                <td><textarea placeholder="Listez les ressources personnelles..."></textarea></td>
+                <td><textarea placeholder="Identifiez les obstacles personnels..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Institutionnels</strong></td>
+                <td><textarea placeholder="Listez les ressources institutionnelles..."></textarea></td>
+                <td><textarea placeholder="Identifiez les obstacles institutionnels..."></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>Socioculturels</strong></td>
+                <td><textarea placeholder="Listez les ressources socioculturelles..."></textarea></td>
+                <td><textarea placeholder="Identifiez les obstacles socioculturels..."></textarea></td>
+            </tr>
+        </table>
+        
+        <h3>PARTIE 4: PREMIÈRES PISTES D'INTERVENTION</h3>
+        <p class="notes">Proposez au moins 3 pistes d'intervention adaptées aux besoins identifiés.</p>
+        <table>
+            <tr>
+                <th width="25%">Dimension</th>
+                <th width="25%">Stratégie pédagogique adaptée</th>
+                <th width="25%">Concepts théoriques mobilisés</th>
+                <th width="25%">Résultats attendus</th>
+            </tr>
+            <tr>
+                <td><textarea placeholder="Précisez la dimension concernée..."></textarea></td>
+                <td><textarea placeholder="Décrivez la stratégie..."></textarea></td>
+                <td><textarea placeholder="Mentionnez les concepts..."></textarea></td>
+                <td><textarea placeholder="Indiquez les résultats attendus..."></textarea></td>
+            </tr>
+            <tr>
+                <td><textarea placeholder="Précisez la dimension concernée..."></textarea></td>
+                <td><textarea placeholder="Décrivez la stratégie..."></textarea></td>
+                <td><textarea placeholder="Mentionnez les concepts..."></textarea></td>
+                <td><textarea placeholder="Indiquez les résultats attendus..."></textarea></td>
+            </tr>
+            <tr>
+                <td><textarea placeholder="Précisez la dimension concernée..."></textarea></td>
+                <td><textarea placeholder="Décrivez la stratégie..."></textarea></td>
+                <td><textarea placeholder="Mentionnez les concepts..."></textarea></td>
+                <td><textarea placeholder="Indiquez les résultats attendus..."></textarea></td>
+            </tr>
+        </table>
+        
+        <h3>PARTIE 5: SYNTHÈSE ET QUESTIONS D'APPROFONDISSEMENT</h3>
+        <p class="notes">Répondez aux questions suivantes pour préparer votre restitution.</p>
+        <ol>
+            <li>Quels sont les 3 éléments interculturels les plus significatifs dans ce cas?
+                <textarea placeholder="Votre réponse..."></textarea>
+            </li>
+            <li>En quoi ces éléments impactent-ils spécifiquement l'apprentissage?
+                <textarea placeholder="Votre réponse..."></textarea>
+            </li>
+            <li>Quelles compétences l'enseignant doit-il mobiliser prioritairement face à cette situation?
+                <textarea placeholder="Votre réponse..."></textarea>
+            </li>
+            <li>Quelles questions seraient pertinentes à approfondir pour mieux comprendre la situation?
+                <textarea placeholder="Votre réponse..."></textarea>
+            </li>
+        </ol>
+    </div>
+    
+    <div class="instructions">
+        <h2><span class="step">3</span>Consignes pour la restitution croisée</h2>
+        <ul>
+            <li>Désignez un porte-parole qui présentera votre analyse (5 minutes par groupe)</li>
+            <li>Structurez votre présentation autour des besoins identifiés et des pistes d'intervention</li>
+            <li>Préparez-vous à répondre aux questions des autres groupes</li>
+            <li>Pendant l'écoute des autres groupes, notez:
+                <ul>
+                    <li>Un élément d'analyse que vous n'aviez pas identifié</li>
+                    <li>Une piste d'intervention que vous trouvez particulièrement pertinente</li>
+                    <li>Une question d'approfondissement</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>Pour vos notes pendant les présentations des autres groupes:</p>
+        <textarea placeholder="Notes pendant les présentations..." style="min-height: 100px;"></textarea>
+    </div>
+    
+    <div style="text-align: center; margin: 30px 0;">
+        <button class="button" onclick="saveProgress()">Enregistrer mon travail</button>
+        <button class="button" onclick="window.print()">Imprimer cette page</button>
+    </div>
+    
+    <div class="footer">
+        <p>Module: Inclusion et gestion de l'hétérogénéité - Journée 2</p>
+    </div>
+
+    <script>
+        function switchCase(event, caseId) {
+            // Hide all case contents
+            var caseContents = document.getElementsByClassName('case-content');
+            for (var i = 0; i < caseContents.length; i++) {
+                caseContents[i].classList.remove('active');
+            }
+            
+            // Remove active class from all tabs
+            var caseTabs = document.getElementsByClassName('case-tab');
+            for (var i = 0; i < caseTabs.length; i++) {
+                caseTabs[i].classList.remove('active');
+            }
+            
+            // Show the selected case content and mark tab as active
+            document.getElementById(caseId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+        
+        function saveProgress() {
+            alert("Fonctionnalité d'enregistrement simulée. Dans un environnement réel, cette fonction sauvegarderait votre travail.");
+            // Dans un environnement réel, on pourrait ajouter ici un code pour sauvegarder les données
+            // dans localStorage ou pour les envoyer à un serveur
+        }
+    </script>
+</body>
+</html>
