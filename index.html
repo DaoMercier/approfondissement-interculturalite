@@ -2,15 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sommaire de la formation</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
 </head>
-<body>
-  <h1>Sommaire — Journée de formation</h1>
-  <ul>
-     <li><a href="fiche_activité2.html">Observation structurée</a></li>
-    <li><a href="fiche_activité_design.html">Design d’interventions</a></li>
-    <li><a href="Checklist.html">Checklist ADDIE</a></li>
-       <li><a href="fiche_synthèse.html">Synthèse & examen</a></li>
-  </ul>
+<body class="bg-light">
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Journée de formation – Sommaire</h1>
+    <div class="row g-3">
+      <!-- 1. fiche_activité2 -->
+      <div class="col-sm-6 col-lg-4">
+        <a href="fiche_activité2.html" class="card h-100 text-decoration-none text-dark shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Observation structurée</h5>
+            <p class="card-text">Activité détaillée</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 2. fiche_activité_design -->
+      <div class="col-sm-6 col-lg-4">
+        <a href="fiche_activité_design.html" class="card h-100 text-decoration-none text-dark shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Design d’interventions</h5>
+            <p class="card-text">Module différenciation</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 3. Checklist -->
+      <div class="col-sm-6 col-lg-4">
+        <a href="Checklist.html" class="card h-100 text-decoration-none text-dark shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Checklist ADDIE</h5>
+            <p class="card-text">Version imprimable</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 4. fiche_synthèse -->
+      <div class="col-sm-6 col-lg-4">
+        <a href="fiche_synthèse.html" class="card h-100 text-decoration-none text-dark shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Synthèse & examen</h5>
+            <p class="card-text">Récapitulatif et checklist</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- …vous pouvez ajouter d’autres blocs ici si besoin… -->
+    </div>
+  </div>
 </body>
 </html>
